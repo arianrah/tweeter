@@ -1,0 +1,17 @@
+header {
+  height: 400px;
+  width: 100%;
+  margin-top: 120px;
+  background-color: #5684ad;
+  background-image: url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+#profileName {
+  text-align: center;
+}
+
+#profilePic {
+text-align: center;
+padding-top: 30px;
+}

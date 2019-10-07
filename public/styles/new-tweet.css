@@ -1,0 +1,30 @@
+form {
+  margin-top: 1%;
+}
+
+textarea {
+  border: none;
+  border-bottom: 2px solid black;
+  overflow: auto;
+  outline: none;
+  width: 100%;
+
+  background-color: #f4f1ec;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+#submitbtn {
+  background-color: #00529c;
+  color: white;
+  font-family: 'Bungee', sans-serif;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.counter {
+  padding: 0px;
+  float: right;
+}
