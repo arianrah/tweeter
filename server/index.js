@@ -39,11 +39,10 @@ app.post('/tweets', (req, res) => {
 
 // // FUNCTIONS // //
 
-//counter
-let TAmaxLength = 140;
-$('textarea').keyup(function(){
-  let length = $(this).val().length;
-  var length = TAmaxLength-length;
-  $('.chars').text(length);
-});
-
+// //counter
+// let maxLength = 140;
+// $('textarea').keyup(function(){
+//   let length = $(this).val().length;
+//   let length = maxLength-length;
+//   $('.chars').text(length);
+// });
