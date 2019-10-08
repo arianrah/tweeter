@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 // Basic express setup:
 
@@ -35,3 +35,15 @@ app.listen(PORT, () => {
 
 app.post('/tweets', (req, res) => {
 });
+
+
+// // FUNCTIONS // //
+
+//counter
+let TAmaxLength = 140;
+$('textarea').keyup(function(){
+  let length = $(this).val().length;
+  var length = TAmaxLength-length;
+  $('.chars').text(length);
+});
+

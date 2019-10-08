@@ -1,5 +1,5 @@
 form {
-  margin-top: 1%;
+  margin-top: 5%;
 }
 
 textarea {
@@ -8,12 +8,8 @@ textarea {
   overflow: auto;
   outline: none;
   width: 100%;
-
+  resize: none;
   background-color: #f4f1ec;
-
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
 }
 
 #submitbtn {
