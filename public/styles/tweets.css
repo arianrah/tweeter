@@ -8,6 +8,8 @@
   width: 98%;
   margin: 0 auto;
   border-bottom: 2px black solid;
+  clear: left;
+  font-family:'Source Sans Pro', sans-serif;
 }
 
 .tweet-icons {
@@ -41,11 +43,6 @@ i {
   padding-right: 2%;
   font-family: 'Bungee Hairline', cursive;
   opacity: 0;
-}
-
-.tweet-body {
-  clear: left;
-  font-family:'Source Sans Pro', sans-serif;
 }
 
 .tweet-post-date {

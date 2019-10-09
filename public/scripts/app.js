@@ -3,7 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
+$(document).ready(function() {
 const data = [
   {
     "user": {
@@ -21,7 +21,8 @@ const data = [
     "user": {
       "name": "Descartes",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
+      "handle": "@rd" 
+    },
     "content": {
       "text": "Je pense , donc je suis"
     },
@@ -29,16 +30,35 @@ const data = [
   }
 ]
 
-const renderTweets = function(tweets) {
-// loops through tweets
-// calls createTweetElement for each tweet
-// takes return value and appends it to the tweets container
+let renderTweets = function(tweets) {
+for (let tweet of tweets){
+  let output = createTweetElement(tweet);
+  $(`#tweet-container`).append(output);
+  }
 }
 
-const createTweetElement = function(tweet) {
-let $tweet = $('<article>').addClass('tweet');
-// ...
-return $tweet;
-}
-
+let createTweetElement = function(tweet) {
+  let $tweets = (`
+  <article class='tweet'>
+  <header>
+    <img src='${tweet.user.avatars}'>  
+    <div>            
+      <h4 class='tweet-username'>${tweet.user.name}</h4>
+    <h4 class='tweet-userhandle'>${tweet.user.handle}</h4>
+  </div>
+  </header>
+  <span class='tweet-body'>${tweet.content.text}</span>
+  <footer>
+    <h4 class='tweet-post-date'>${tweet.created_at}/h4>
+    <div class='tweet-icons'>
+        <i class="fa fa-flag"></i>
+        <i class='fa fa-heart'></i>
+        <i class='fa fa-refresh'></i>
+    </div>
+  </footer>
+</article>
+`);
+return $tweets;
+};
 renderTweets(data);
+})
