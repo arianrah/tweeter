@@ -10,6 +10,7 @@ textarea {
   width: 100%;
   resize: none;
   background-color: #f4f1ec;
+  font-weight: bolder;
 }
 
 #submitbtn {
