@@ -1,93 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
-    <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-
-    <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
-    <!-- Nav -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-
-    <!-- Header -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-
-    <!-- New Tweet -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
-    <!-- Tweets -->
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
-
-    <!-- External Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:700i&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-
-    <!-- External Icons -->
     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script defer type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script defer type="text/javascript" src="/scripts/app.js"></script>
+    <script defer type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
-
   <body>
-
-    <!-- Top nav bar (fixed) -->
     <nav>
       <span class='nav-logo'>tweeter</span>
       <button class="nav-new-tweet">Write New Tweet<br><i id='arrow' class="fa fa-angle-double-down"></i></button>
     </nav>
-
-    <!-- Header (User) -->
-    <header class='userHeader'>
-      <div id="profilePic">
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <div>
-          <h2 id="profileName">Hulk Hogan</h2>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-        <section class="new-tweet">
-          <span class="new-tweet-error"></span>
-          <form id="tweet-form" method="POST" action="/tweets">
-            <textarea class="main-tweet-area" name="text" placeholder="What are you humming about?" rows="1"></textarea>
-            <input id="submitbtn" type="submit" value="Tweet">
-            <span class="counter">140</span>
-          </form>
-        </section>
-        <!-- Tweets Container -->
-        <div id='tweet-container'>
-          <article class='tweet'>
-            <header>
-             <img class ='tweet-image' src='https://i.imgur.com/5fUVPRP.png'>            
-              <h4 class='tweet-username'>Hulk Hogan</h4>
-              <h4 class='tweet-userhandle'>@Hulkster420</h4>
-            </header>
-            <span class='tweet-body'>I like turtles, especially the pink ones! 🥰</span>
-            <footer>
-              <h4 class='tweet-post-date'> 2 days ago</h4>
-              <div class='tweet-icons'>
-                <i class="fa fa-flag"></i>
-                <i class='fa fa-heart'></i>
-                <i class='fa fa-refresh'></i>
-              </div>
-            </footer>
-          </article>
+    <div id='header-and-main'>
+      <header class='userHeader'>
+        <div id="profilePic">
+            <img src="/images/profile-hex.png"> 
         </div>
-    </main>
+        <div>
+            <h2 id="profileName">Hulk Hogan</h2>
+        </div>
+      </header>
+      <main class="container">
+          <section class="new-tweet">
+            <span class="new-tweet-error"></span>
+            <form id="tweet-form" method="POST" action="/tweets">
+              <textarea class="main-tweet-area" name="text" placeholder="What are you humming about?" rows="1"></textarea>
+              <input id="submitbtn" type="submit" value="Tweet">
+              <span class="counter">140</span>
+            </form>
+          </section>
+          <div id='tweet-container'>
+            <article class='tweet'>
+              <header>
+                <img class ='tweet-image' src='https://i.imgur.com/5fUVPRP.png'>            
+                <h4 class='tweet-username'>Hulk Hogan</h4>
+                <h4 class='tweet-userhandle'>@Hulkster420</h4>
+              </header>
+              <span class='tweet-body'>I like turtles, especially the pink ones! 🥰</span>
+              <footer>
+                <h4 class='tweet-post-date'> 2 days ago</h4>
+                <div class='tweet-icons'>
+                  <i class="fa fa-flag"></i>
+                  <i class='fa fa-heart'></i>
+                  <i class='fa fa-refresh'></i>
+                </div>
+              </footer>
+            </article>
+          </div>
+      </main>
+    </div>
   </body>
-
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-    
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-
-    <!--TA Char Counter jS -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </html>

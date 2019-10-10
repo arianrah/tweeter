@@ -1,7 +1,6 @@
 form {
   margin-top: 5%;
 }
-
 textarea {
   border: none;
   border-bottom: 2px solid black;
@@ -12,7 +11,6 @@ textarea {
   background-color: #f4f1ec;
   font-weight: bolder;
 }
-
 #submitbtn {
   background-color: #00529c;
   color: white;
@@ -20,12 +18,10 @@ textarea {
   vertical-align: middle;
   display: inline-block;
 }
-
 .counter {
   padding: 0px;
   float: right;
 }
-
 .new-tweet-error {
   border: 5px dashed red;
   margin-top: 5%;

@@ -3,9 +3,7 @@ $(document).ready(function() {
     $(".new-tweet").slideToggle(500);
     $('.main-tweet-area').focus();
   });
-
 $('.new-tweet-error').hide();
-
 $( "#tweet-form" ).on( "submit", function( event ) {
   event.preventDefault();
   let tweetBody = $( this ).serialize();
@@ -25,6 +23,7 @@ $( "#tweet-form" ).on( "submit", function( event ) {
   });
 });
   let loadTweets = () => {
+    $('textarea').val('')
     $.get('/tweets', function(res){
      renderTweets(res);
     })
@@ -43,7 +42,6 @@ const escape =  function(str) {
 }
 let createTweetElement = function(tweet) {
   let date = new Date(tweet.created_at).toDateString();
-  
   let $tweets = (`
     <article class='tweet'>
     <header>

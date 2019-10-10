@@ -6,14 +6,18 @@
   background-image: url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
-
 #profileName {
   text-align: center;
   font-family:'Source Sans Pro', sans-serif;
   font-weight: bolder;
 }
-
 #profilePic {
 text-align: center;
 padding-top: 30px;
+}
+@media only screen and (min-width: 1200px) {
+  .userHeader {
+    width: 25%;
+    margin: 5%;
+  }
 }

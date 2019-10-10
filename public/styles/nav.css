@@ -7,19 +7,17 @@ nav {
   width: 100%;
   margin-top: -120px;
 }
-
 span {
   display: block;
   font-family: 'Bungee', sans-serif;
   padding: 4%;
 }
-
 .nav-logo {
   display: inline-block;
-  margin-top: 0.5em;
+  /* margin-top: 0.5em; */
+  padding-top: 1em;
   font-size: xx-large;
 }
-
 .nav-new-tweet {
   display: inline-block;
   float: right;
@@ -32,7 +30,6 @@ span {
   cursor: pointer;
   display: inline-block;
 }
-
 @keyframes bounce {
 	0%, 100%, 20%, 50%, 80% {
 		-webkit-transform: translateY(0);
@@ -68,8 +65,7 @@ span {
   animation-name: bounce;
   -moz-animation-name: bounce;
 }
-
-@media only screen and (max-width: 506px) {
+@media only screen and (max-width: 414px) {
   .nav-new-tweet {
     clear: both;
     display: block;
@@ -77,16 +73,19 @@ span {
     margin: 0 auto;
     text-align: center;
   }
-
   nav {
     flex-direction: column;
     justify-content: space-between;
   }
-
   nav span {
     float: left;
     text-align: center;
     width: 100vw;
     margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .nav-logo {
+    padding-top: 1em;
   }
 }
