@@ -18,3 +18,15 @@ This repository is built upon Lighthouse Labs Tweeter starter code to showcase m
 - Node 5.10.x or above
 - body-parser 1.15.x or above
 - Chance 1.0.x or above
+
+## Screenshots
+
+!["Desktop Resolution (width larger than 1200px)"](https://github.com/arianrah/tweeter/blob/master/docs/desktop_res.png?raw=true)
+
+!["Mobile Resolution (width smaller than 414px)"](https://github.com/arianrah/tweeter/blob/master/docs/mobile_res.png?raw=true)
+
+!["Tablet Resolution (width between 1200px and 414px"](https://github.com/arianrah/tweeter/blob/master/docs/tablet_res.png?raw=true)
+
+!["In-app error pop-up demo"](https://github.com/arianrah/tweeter/blob/master/docs/error_demo.png?raw=true)
+
+
