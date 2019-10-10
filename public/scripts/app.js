@@ -1,9 +1,14 @@
 $(document).ready(function() {
+  //nav-new-tweet button: toggle textarea
   $(".nav-new-tweet").click(function(){
     $(".new-tweet").slideToggle(500);
     $('.main-tweet-area').focus();
   });
+
+//error default: hide
 $('.new-tweet-error').hide();
+
+//client-server interaction for new tweet
 $( "#tweet-form" ).on( "submit", function( event ) {
   event.preventDefault();
   let tweetBody = $( this ).serialize();
@@ -13,33 +18,41 @@ $( "#tweet-form" ).on( "submit", function( event ) {
   if ($('.main-tweet-area').val().length > 140) {
     $(".new-tweet-error").html('YOU HAVE SAID TOO MUCH 🤫').show().delay(2500).fadeOut();
   } else {
-  $.ajax({
-    method: "POST",
-    url: "/tweets",
-    data: tweetBody
-  })
-    .then(loadTweets);
-}
+    $.ajax({
+      method: "POST",
+      url: "/tweets",
+      data: tweetBody
+    })
+      .then(loadTweets);
+    }
   });
-});
+
+}); //end of document.ready
+
   let loadTweets = () => {
     $('textarea').val('')
     $.get('/tweets', function(res){
      renderTweets(res);
     })
 };
+
+//render tweets
 let renderTweets = (tweets) => {
-$('#tweet-container').empty();
-for (let tweet of tweets){
-  let output = createTweetElement(tweet);
-  $(`#tweet-container`).prepend(output);
+  $('#tweet-container').empty();
+  for (let tweet of tweets){
+    let output = createTweetElement(tweet);
+    $(`#tweet-container`).prepend(output);
+  }
 }
-}
+
+//client input script stopper
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
+
+//used by render tweets to plug in data to template
 let createTweetElement = function(tweet) {
   let date = new Date(tweet.created_at).toDateString();
   let $tweets = (`
