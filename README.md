@@ -21,12 +21,16 @@ This repository is built upon Lighthouse Labs Tweeter starter code to showcase m
 
 ## Screenshots
 
+### Desktop Resolution
 !["Desktop Resolution (width larger than 1200px)"](https://github.com/arianrah/tweeter/blob/master/docs/desktop_res.png?raw=true)
 
+### Mobile Resolution
 !["Mobile Resolution (width smaller than 414px)"](https://github.com/arianrah/tweeter/blob/master/docs/mobile_res.png?raw=true)
 
+### Tablet Resolution
 !["Tablet Resolution (width between 1200px and 414px"](https://github.com/arianrah/tweeter/blob/master/docs/tablet_res.png?raw=true)
 
+### Error Demo
 !["In-app error pop-up demo"](https://github.com/arianrah/tweeter/blob/master/docs/error_demo.png?raw=true)
 
 
