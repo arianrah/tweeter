@@ -10,26 +10,20 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <!-- Nav --><link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <!-- Nav -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <!-- Header --><link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <!-- Header -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-    <!-- New Tweet --><link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <!-- New Tweet -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-    <!-- Tweets --><link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
-
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-    
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-
-    <!--TA Char Counter jS -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <!-- Tweets -->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External Fonts-->
-    <link href=
-    "https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:700i&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline&display=swap" rel="stylesheet">
 
@@ -43,7 +37,8 @@
 
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span class='nav-logo'>tweeter</span>
+      <button class="nav-new-tweet">Write New Tweet<br><i id='arrow' class="fa fa-angle-double-down"></i></button>
     </nav>
 
     <!-- Header (User) -->
@@ -58,16 +53,18 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
         <section class="new-tweet">
-          <form method="POST" action="/tweets">
+          <span class="new-tweet-error"></span>
+          <form id="tweet-form" method="POST" action="/tweets">
             <textarea class="main-tweet-area" name="text" placeholder="What are you humming about?" rows="1"></textarea>
             <input id="submitbtn" type="submit" value="Tweet">
             <span class="counter">140</span>
           </form>
         </section>
+        <!-- Tweets Container -->
         <div id='tweet-container'>
           <article class='tweet'>
             <header>
-             <img src='https://i.imgur.com/5fUVPRP.png'>            
+             <img class ='tweet-image' src='https://i.imgur.com/5fUVPRP.png'>            
               <h4 class='tweet-username'>Hulk Hogan</h4>
               <h4 class='tweet-userhandle'>@Hulkster420</h4>
             </header>
@@ -83,14 +80,14 @@
           </article>
         </div>
     </main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
   </body>
+
+    <!-- External JS -->
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!--TA Char Counter jS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </html>

@@ -11,5 +11,60 @@ nav {
 span {
   display: block;
   font-family: 'Bungee', sans-serif;
-  padding: 1.5em;
+  padding: 4%;
+}
+
+.nav-logo {
+  display: inline-block;
+  margin-top: 1%;
+  font-size: xx-large;
+}
+
+.nav-new-tweet {
+  display: inline-block;
+  float: right;
+  border: none;
+  color: white;
+  background-color: inherit;
+  margin-top: 5%;
+  margin-right: 7%;
+  font-size: 20px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-8px);
+		-ms-transform:     translateY(-8px);
+		transform:         translateY(-8px)
+	}
+	60% {
+		-webkit-transform: translateY(-5px);
+		-ms-transform:     translateY(-5px);
+		transform:         translateY(-5px)
+	}
+}
+#arrow {  
+  color: darkred;
+  border-radius: 50%;
+  text-transform: uppercase;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  color: white;
+}
+#arrow:hover {
+  color: darkred;
+  cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
 }

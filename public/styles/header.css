@@ -9,6 +9,8 @@
 
 #profileName {
   text-align: center;
+  font-family:'Source Sans Pro', sans-serif;
+  font-weight: bolder;
 }
 
 #profilePic {

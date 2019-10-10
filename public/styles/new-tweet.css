@@ -25,3 +25,9 @@ textarea {
   padding: 0px;
   float: right;
 }
+
+.new-tweet-error {
+  border: 5px dashed red;
+  margin-top: 5%;
+  text-align: center;
+}
