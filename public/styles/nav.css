@@ -5,7 +5,7 @@ nav {
   z-index: 6969;
   position: fixed;
   width: 100%;
-  margin-top: -120px;;
+  margin-top: -120px;
 }
 
 span {
@@ -16,7 +16,7 @@ span {
 
 .nav-logo {
   display: inline-block;
-  margin-top: 1%;
+  margin-top: 0.5em;
   font-size: xx-large;
 }
 
@@ -26,7 +26,7 @@ span {
   border: none;
   color: white;
   background-color: inherit;
-  margin-top: 5%;
+  margin-top: 2em;
   margin-right: 7%;
   font-size: 20px;
   cursor: pointer;
@@ -51,7 +51,7 @@ span {
 	}
 }
 #arrow {  
-  color: darkred;
+  color: red;
   border-radius: 50%;
   text-transform: uppercase;
   -webkit-animation-duration: 1s;
@@ -67,4 +67,26 @@ span {
   cursor: pointer;
   animation-name: bounce;
   -moz-animation-name: bounce;
+}
+
+@media only screen and (max-width: 506px) {
+  .nav-new-tweet {
+    clear: both;
+    display: block;
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  nav span {
+    float: left;
+    text-align: center;
+    width: 100vw;
+    margin: 0 auto;
+  }
 }
