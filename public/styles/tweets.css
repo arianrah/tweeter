@@ -15,6 +15,7 @@
   float: right;
   margin-top: 2%;
   margin-right: 2%;
+  opacity: 0;
 }
 i {
   width: 25px;
@@ -54,6 +55,10 @@ i {
   font-family: 'Bungee', 'cursive';
 }
 .tweet:hover .tweet-userhandle {
+  opacity: 100;
+}
+
+.tweet:hover .tweet-icons {
   opacity: 100;
 }
 
