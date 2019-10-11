@@ -8,6 +8,8 @@ $(document).ready(function() {
 //error default: hide
 $('.new-tweet-error').hide();
 
+$('.new-tweet').hide();
+
 //client-server interaction for new tweet
 $( "#tweet-form" ).on( "submit", function( event ) {
   event.preventDefault();
@@ -31,6 +33,7 @@ $( "#tweet-form" ).on( "submit", function( event ) {
 
   let loadTweets = () => {
     $('textarea').val('')
+    $('.counter').text('140')
     $.get('/tweets', function(res){
      renderTweets(res);
     })
